@@ -1,0 +1,91 @@
+<div class="preview-item-content">
+									<p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item nav-category">
+					<span class="nav-link">Navigation</span>
+				</li>
+				<li class="nav-item menu-items">
+					<a class="nav-link" href="<?= site_url('admin/home') ?>">
+						<span class="menu-icon">
+							<i class="mdi mdi-speedometer"></i>
+						</span>
+						<span class="menu-title">Dashboard</span>
+					</a>
+				</li>
+				<li class="nav-item menu-items">
+					<a class="nav-link" href="<?= site_url('admin/konten') ?>">
+						<span class="menu-icon">
+							<i class="mdi mdi-playlist-play"></i>
+						</span>
+						<span class="menu-title">Konten</span>
+					</a>
+				</li>
+				<li class="nav-item menu-items">
+					<a class="nav-link" href="<?= site_url('admin/kategori') ?>">
+						<span class="menu-icon">
+							<i class="mdi mdi-table-large"></i>
+						</span>
+						<span class="menu-title">Kategori Konten</span>
+					</a>
+				</li>
+				<li class="nav-item menu-items">
+					<a class="nav-link" href="<?= site_url('admin/galeri') ?>">
+						<span class="menu-icon">
+							<i class="mdi mdi-table-large"></i>
+						</span>
+						<span class="menu-title">Galeri</span>
+					</a>
+				</li>
+				<li class="nav-item menu-items">
+					<a class="nav-link" href="<?= site_url('admin/caraousel') ?>">
+						<span class="menu-icon">
+							<i class="mdi mdi-chart-bar"></i>
+						</span>
+						<span class="menu-title">Caraousel</span>
+					</a>
+				</li>
+				<?php if($this->session->userdata('level')=='admin') { ?>
+					<li class="nav-item menu-items">
+						<a class="nav-link" href="<?= site_url('admin/user') ?>">
+							<span class="menu-icon">
+								<i class="mdi mdi-contacts"></i>
+							</span>
+							<span class="menu-title">User</span>
+						</a>
+					</li> 
+					<li class="nav-item menu-items">
+						<a class="nav-link" href="<?= site_url('admin/konfigurasi') ?>">
+							<span class="menu-icon">
+								<i class="mdi mdi-security"></i>
+							</span>
+							<span class="menu-title">Konfigurasi</span>
+						</a>
+					</li>
+				<?php } ?>
+			</ul>
+		</nav>
+		<!-- partial -->
+		<div class="container-fluid page-body-wrapper">
+			<!-- partial:partials/_navbar.html -->
+			<nav class="navbar p-0 fixed-top d-flex flex-row">
+				<div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+					<a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('assets/corona/template/') ?>/assets/images/logo-mini.svg"
+							alt="logo" /></a>
+				</div>
+				<div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+					<button class="navbar-toggler navbar-toggler align-self-center" type="button"
+						data-toggle="minimize">
+						<span class="mdi mdi-menu"></span>
+					</button>
+					<ul class="navbar-nav w-100">
+						<li class="nav-item w-50">
+							<form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+								<input type="text" class="form-control" placeholder="Search products">
+							</form>
+						</li>
+					</ul>
+					<ul class="nav
